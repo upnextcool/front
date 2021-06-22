@@ -48,7 +48,6 @@ export default {
   apollo: {
     queue: {
       query: QUEUE,
-      fetchPolicy: "network-only",
       pollInterval: 3000,
     },
   },
