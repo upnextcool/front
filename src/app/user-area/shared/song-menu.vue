@@ -7,8 +7,8 @@
     </template>
     <v-sheet elevation="10">
       <v-list>
-        <v-list-item dense>
-          <v-list-item-avatar tile>
+        <v-list-item>
+          <v-list-item-avatar size="100" tile>
             <v-img :src="songArtwork"></v-img>
           </v-list-item-avatar>
           <v-list-item-content>

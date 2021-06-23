@@ -50,15 +50,10 @@ export const HISTORY = gql`
   query {
     history {
       id
-      addedBy {
-        id
-        username
-      }
       albumArtwork
       name
       artist
       playedAt
-      score
       spotifyId
     }
   }
