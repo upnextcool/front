@@ -12,25 +12,23 @@
           <!--              <v-btn icon><v-icon>mdi-spotify</v-icon></v-btn>-->
           <!--            </div>-->
           <!--          </v-card>-->
-          <transition appear mode="out-in" name="wipe">
-            <v-responsive
-              max-height="80vw"
-              max-width="80vw"
-              class="mx-auto"
-              aspect-ratio="1"
+          <v-responsive
+            max-height="80vw"
+            max-width="80vw"
+            class="mx-auto"
+            aspect-ratio="1"
+          >
+            <v-card
+              v-if="partyState"
+              rounded
+              elevation="20"
+              :key="partyState.artwork"
+              class="text-center"
             >
-              <v-card
-                v-if="partyState"
-                rounded
-                elevation="20"
-                :key="partyState.artwork"
-                class="text-center"
-              >
-                <v-img :src="partyState.artwork" class="elevation-0" contain>
-                </v-img>
-              </v-card>
-            </v-responsive>
-          </transition>
+              <v-img :src="partyState.artwork" class="elevation-0" contain>
+              </v-img>
+            </v-card>
+          </v-responsive>
           <v-card elevation="0" color="transparent" width="80vw">
             <h1 class="text-h6 mt-2 ellipsis">{{ partyState.name }}</h1>
             <h1 class="text-body-2 font-weight-light mb-5 ellipsis">
@@ -51,11 +49,7 @@
       </v-col>
     </v-container>
 
-    <v-container
-      v-else-if="partyState && partyState.state === 4"
-      fluid
-      class="fill-height"
-    >
+    <v-container v-else fluid class="fill-height">
       <v-col cols="12">
         <v-row align="center" justify="center">
           <v-sheet class="text-center" elevation="0" color="transparent">
@@ -96,7 +90,7 @@ export default {
     },
     background() {
       return this.partyState
-        ? `background-image: linear-gradient(rgba(0,0,0,0.1) 1%, ${this.partyState.palette.darkVibrant}ff 50%, rgba(0,0,0,1) 100%);`
+        ? `background-image: linear-gradient(rgba(0,0,0,0.1) 1%, ${this.partyState.palette ? this.partyState.palette.darkVibrant ?? this.partyState.palette.darkMuted : '000000'}ff 50%, rgba(0,0,0,1) 100%);`
         : "";
     },
   },

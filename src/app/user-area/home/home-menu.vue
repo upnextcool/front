@@ -70,15 +70,15 @@ export default {
   data: () => ({
     sheet: false,
     party: null,
-    qrBack: 'ffffff',
-    qrFront: '000000'
+    qrBack: "ffffff",
+    qrFront: "000000",
   }),
   methods: {
     async share() {
       const shareData = {
         title: this.party.name,
         text: "Join the party!",
-        url: `${this.$frontUrl}/join?c=${this.party.code}`,
+        url: `${this.$frontUrl}join?c=${this.party.code}`,
       };
       await navigator.share(shareData);
     },

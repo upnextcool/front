@@ -74,7 +74,6 @@ export default {
         .reduce((p, c) => p + c, 0);
     },
     async upvoteSong(entry) {
-      console.log(entry.id);
       this.voteDialog = false;
       await this.$apollo.mutate({
         mutation: UPVOTE_SONG,

@@ -21,7 +21,7 @@
             <v-row class="pb-4" justify="center" align="center">
               <h1 class="text-h6">Popular Playlists</h1>
               <v-spacer></v-spacer>
-              <v-btn x-small text>View All</v-btn>
+              <v-btn x-small text to="/app/view/popular">more</v-btn>
             </v-row>
             <v-row class="mt-4">
               <div class="playlist-grid-container">
@@ -39,11 +39,6 @@
                   <p class="text-caption py-2">{{ item.name }}</p>
                 </v-card>
               </div>
-            </v-row>
-            <v-row class="pb-4" justify="center" align="center">
-              <h1 class="text-h6">Something</h1>
-              <v-spacer></v-spacer>
-              <v-btn x-small text>View All</v-btn>
             </v-row>
           </v-col>
         </v-row>
@@ -204,18 +199,9 @@ export default {
     if (query) {
       this.query = query;
       await this.search();
-    } else {
-      await this.getRecommendations();
     }
   },
   methods: {
-    async getRecommendations() {
-      const { data } = await this.$apollo.query({
-        query: SPOTIFY_RECOMMENDATIONS,
-      });
-      console.log(data);
-      this.recommendations = data.spotifyRecommendations;
-    },
     async searchInput() {
       this.searching = true;
       this.debounceSearch();
@@ -232,7 +218,6 @@ export default {
       if (!this.query || this.query === "") {
         this.results = null;
         this.query = "";
-        await this.getRecommendations();
         return;
       }
       const { data } = await this.$apollo.query({
@@ -242,20 +227,24 @@ export default {
           query: this.query,
         },
       });
-      console.log(data.spotifySearch);
       this.results = data.spotifySearch;
       this.searching = false;
     },
   },
   computed: {
     recommendationPlaylists() {
-      return this.recommendations.playlists.items.slice(0, 6);
+      return this.recommendations.playlists.items.slice(0, 9);
     },
   },
   beforeRouteUpdate(to, from, next) {
     this.query = to.query?.q;
     this.search();
     next();
+  },
+  apollo: {
+    recommendations: {
+      query: SPOTIFY_RECOMMENDATIONS,
+    },
   },
 };
 </script>

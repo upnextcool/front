@@ -2,7 +2,7 @@ import gql from "graphql-tag";
 
 export const SPOTIFY_RECOMMENDATIONS = gql`
   query {
-    spotifyRecommendations
+    recommendations: spotifyRecommendations
   }
 `;
 
@@ -46,6 +46,24 @@ export const PARTY = gql`
   }
 `;
 
+export const HISTORY = gql`
+  query {
+    history {
+      id
+      addedBy {
+        id
+        username
+      }
+      albumArtwork
+      name
+      artist
+      playedAt
+      score
+      spotifyId
+    }
+  }
+`;
+
 export const QUEUE = gql`
   query {
     queue {
@@ -77,6 +95,12 @@ export const QUEUE = gql`
 export const SPOTIFY_SEARCH = gql`
   query ($query: String!) {
     spotifySearch(query: $query)
+  }
+`;
+
+export const VALID_TOKEN = gql`
+  query {
+    validToken
   }
 `;
 

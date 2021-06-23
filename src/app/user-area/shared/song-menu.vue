@@ -104,14 +104,12 @@ export default {
   methods: {
     async addToQueue() {
       this.sheet = false;
-      console.log(this.songId);
-      const x = await this.$apollo.mutate({
+      await this.$apollo.mutate({
         mutation: ADD_TO_QUEUE,
         variables: {
           songId: this.songId,
         },
       });
-      console.log(x);
     },
     async shareTrack() {
       const shareData = {
@@ -120,7 +118,6 @@ export default {
         url: `https://open.spotify.com/track/${this.songId}`,
       };
       await navigator.share(shareData);
-      console.log(this.songId);
     },
   },
 };

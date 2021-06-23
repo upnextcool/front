@@ -8,7 +8,8 @@
     <v-sheet elevation="10" color="darker">
       <v-list color="transparent">
         <v-list-item
-          href="spotify:playlist:1ChAdx8ECHDTCbGwsYGWMF"
+          v-if="party"
+          :href="`spotify:playlist:${party.spotifyPlaylistId}`"
           target="_blank"
         >
           <v-list-item-icon>
@@ -34,10 +35,16 @@
   </v-bottom-sheet>
 </template>
 <script>
+import { PARTY } from "../../../graphql";
+
 export default {
   name: "app-queue-menu",
   data: () => ({
     sheet: false,
+    party: null,
   }),
+  apollo: {
+    party: PARTY,
+  },
 };
 </script>

@@ -40,9 +40,19 @@ const routes: Array<RouteConfig> = [
         component: () => import("../app/user-area/search/search.vue"),
       },
       {
+        path: "history",
+        component: () => import("../app/user-area/history/history.vue"),
+      },
+      {
         path: "view",
         component: () => import("../app/user-area/view/view.vue"),
         children: [
+          {
+            path: "popular",
+            props: true,
+            component: () =>
+              import("../app/user-area/view/popular-playlists.vue"),
+          },
           {
             path: "playlist/:id",
             props: true,

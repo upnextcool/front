@@ -1,16 +1,33 @@
 <template>
   <v-main>
-    <v-toolbar flat color="transparent">
+    <v-app-bar fixed elevate-on-scroll color="darker">
       <h1 class="text-h4 font-weight-light ellipsis">Queue</h1>
       <v-spacer></v-spacer>
       <app-queue-menu />
-    </v-toolbar>
-    <v-list dense v-if="queue" color="transparent" class="ma-0 pa-0">
+    </v-app-bar>
+    <v-container v-if="queue && queue.length === 0" fluid class="fill-height">
+      <v-col cols="12">
+        <v-row align="center" justify="center">
+          <v-sheet class="text-center" elevation="0" color="transparent">
+            <v-icon color="primary" size="120">mdi-emoticon-sad-outline</v-icon>
+            <h1 class="text-h4 font-weight-light my-3">Empty Queue</h1>
+            <p class="text-body-2 my-5 mx-8">
+              What are you waiting for? Add some music!
+            </p>
+            <v-btn to="/app/search" text small>
+              <v-icon left>mdi-magnify</v-icon>
+              Search for music
+            </v-btn>
+          </v-sheet>
+        </v-row>
+      </v-col>
+    </v-container>
+    <v-list dense v-if="queue" color="transparent" class="ma-0 pa-0 mt-16">
       <template v-for="(item, index) in sortedQueue">
         <app-vote-dialog :key="index" :item="item" />
       </template>
     </v-list>
-    <v-list dense v-else color="transparent" class="ma-0 pa-0">
+    <v-list dense v-else color="transparent" class="ma-0 pa-0 mt-16">
       <v-skeleton-loader
         tile
         v-for="(_, index) in Array(3).fill(0)"
@@ -31,6 +48,9 @@ export default {
   data: () => ({
     queue: null,
   }),
+  mounted() {
+    this.queue = null;
+  },
   computed: {
     sortedQueue() {
       return this.queue
@@ -48,7 +68,7 @@ export default {
   apollo: {
     queue: {
       query: QUEUE,
-      pollInterval: 3000,
+      pollInterval: 1000,
     },
   },
 };

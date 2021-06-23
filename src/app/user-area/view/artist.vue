@@ -1,5 +1,22 @@
 <template>
   <v-main v-if="artist">
+    <v-app-bar
+      fixed
+      elevation="10"
+      inverted-scroll
+      scroll-threshold="150"
+      color="darker"
+    >
+      <v-img
+        contain
+        max-height="40"
+        max-width="40"
+        :src="artist.info.images[0].url"
+      ></v-img>
+      <h1 class="ml-5 text-h5 font-weight-light ellipsis">
+        {{ artist.info.name }}
+      </h1>
+    </v-app-bar>
     <v-img
       :src="artist.info.images[0].url"
       gradient="#121212aa 0%, #00000000 20%, #00000000 60%, #121212ff 100%"

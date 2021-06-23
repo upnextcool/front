@@ -121,7 +121,7 @@ export default {
         .then(({ data }) => {
           console.log(data.token);
           localStorage.setItem("token", data.token);
-          location.href = "/app";
+          location.href = `${this.$frontUrl}app`;
         })
         .catch((err) => {
           console.log(JSON.stringify(err));

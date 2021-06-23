@@ -1,9 +1,7 @@
 <template>
   <v-app dark>
     <v-main>
-      <transition name="scroll-y-transition">
-        <router-view></router-view>
-      </transition>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
