@@ -3,7 +3,6 @@ module.exports = {
   transpileDependencies: ["vuetify"],
   pwa: {
     workboxOptions: {
-      swSrc: "service-worker.js",
       exclude: [/\.map$/, /_redirects/],
     },
   },
