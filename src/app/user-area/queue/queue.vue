@@ -11,9 +11,6 @@
           <v-sheet class="text-center" elevation="0" color="transparent">
             <v-icon color="primary" size="120">mdi-emoticon-sad-outline</v-icon>
             <h1 class="text-h4 font-weight-light my-3">Empty Queue</h1>
-            <p class="text-body-2 my-5 mx-8">
-              What are you waiting for? Add some music!
-            </p>
             <v-btn to="/app/search" text small>
               <v-icon left>mdi-magnify</v-icon>
               Search for music

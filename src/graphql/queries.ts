@@ -1,5 +1,13 @@
 import gql from "graphql-tag";
 
+export const CONFIG = gql`
+  query {
+    config {
+      version
+    }
+  }
+`;
+
 export const SPOTIFY_RECOMMENDATIONS = gql`
   query {
     recommendations: spotifyRecommendations
@@ -113,6 +121,28 @@ export const GET_PARTY_STATE = gql`
         vibrant
         lightVibrant
         darkVibrant
+      }
+    }
+  }
+`;
+
+export const USERS_AT_PARTY = gql`
+  query {
+    members {
+      id
+      joinedAt
+      score
+      username
+      votes {
+        id
+        type
+        playlistEntry {
+          id
+          name
+          artist
+          albumArtwork
+          spotifyId
+        }
       }
     }
   }

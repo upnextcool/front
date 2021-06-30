@@ -16,6 +16,13 @@
       </v-toolbar>
     </template>
     <template v-slot:default>
+      <v-overlay :value="loading" opacity="0.8" color="black">
+        <v-progress-circular
+          indeterminate
+          size="150"
+          color="primary"
+        ></v-progress-circular>
+      </v-overlay>
       <v-container class="fill-height ma-0 pa-0" fluid>
         <v-row align="center" class="ma-0 pa-0" justify="center">
           <v-col
@@ -38,7 +45,12 @@
       </v-container>
     </template>
     <template v-slot:append>
-      <v-form @submit.prevent="null" autocomplete="off" ref="form">
+      <v-form
+        @submit.prevent="null"
+        autocomplete="off"
+        ref="form"
+        v-model="valid"
+      >
         <v-container class="ma-0 pa-0" fluid>
           <v-col class="ma-0 pa-0" cols="12">
             <v-row align="center" class="ma-0 pa-0 px-3" justify="center">
@@ -51,6 +63,11 @@
                     maxlength="20"
                     outlined
                     v-model="partyName"
+                    :rules="[
+                      rules.required,
+                      rules.maximumPartyName,
+                      rules.minimumPartyName,
+                    ]"
                   />
                 </v-row>
               </v-col>
@@ -64,6 +81,11 @@
                     maxlength="20"
                     outlined
                     v-model="nickname"
+                    :rules="[
+                      rules.required,
+                      rules.maximumNickname,
+                      rules.minimumNickname,
+                    ]"
                   />
                 </v-row>
               </v-col>
@@ -77,6 +99,7 @@
                 height="100"
                 tile
                 x-large
+                :disabled="invalid"
               >
                 Start
               </v-btn>
@@ -95,21 +118,39 @@ export default {
   data: () => ({
     partyName: "",
     nickname: "",
+    valid: null,
+    rules: {
+      required: (value) => !!value || "Required",
+      maximumNickname: (value) =>
+        (value ? value.length : 0) <= 20 || "Nickname less than 20 chars",
+      minimumNickname: (value) =>
+        (value ? value.length : 0) > 1 || "Nickname 2 or more chars",
+      maximumPartyName: (value) =>
+        (value ? value.length : 0) <= 20 || "Party name less than 20 chars",
+      minimumPartyName: (value) =>
+        (value ? value.length : 0) > 1 || "Party name 2 or more chars",
+    },
+    loading: false,
   }),
   mounted() {
     if (localStorage.getItem("token")) {
       this.$router.push("/app");
     }
   },
+  computed: {
+    invalid() {
+      return !this.valid;
+    },
+  },
   methods: {
     async startParty() {
+      this.loading = true;
       const { data: partyData } = await this.$apollo.mutate({
         mutation: START_PARTY,
         variables: {
           partyName: this.partyName,
         },
       });
-      console.log(partyData);
       const { data: memberData } = await this.$apollo.mutate({
         mutation: JOIN_PARTY,
         variables: {
@@ -126,7 +167,6 @@ export default {
           partyId: partyData.party.id,
         },
       });
-      console.log(authData);
       location.href = authData.url;
     },
   },

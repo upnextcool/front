@@ -36,6 +36,10 @@ const routes: Array<RouteConfig> = [
         component: () => import("../app/user-area/home/home.vue"),
       },
       {
+        path: "users",
+        component: () => import("../app/user-area/users/users.vue"),
+      },
+      {
         path: "search",
         component: () => import("../app/user-area/search/search.vue"),
       },

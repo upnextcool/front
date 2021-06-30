@@ -51,26 +51,13 @@
             indeterminate
           ></v-progress-circular>
         </v-row>
-        <!--        <v-row align="center" justify="center">-->
-        <!--          <v-card-->
-        <!--            elevation="0"-->
-        <!--            color="transparent"-->
-        <!--            class="mx-auto mt-16 text-center"-->
-        <!--          >-->
-        <!--            <v-icon size="100">mdi-music</v-icon>-->
-        <!--            <h2 class="text-h5 font-weight-light mt-3">Nothing here</h2>-->
-        <!--            <h2 class="text-body-2 font-weight-light mt-3">-->
-        <!--              No results found, try narrowing your search-->
-        <!--            </h2>-->
-        <!--          </v-card>-->
-        <!--        </v-row>-->
       </v-col>
     </v-container>
     <div v-else-if="results" class="mt-16 pt-2 px-4">
       <v-toolbar dense flat color="transparent">
         <h1 class="text-h6 font-weight-light">Songs</h1>
         <v-spacer></v-spacer>
-        <v-btn text x-small>View All</v-btn>
+<!--        <v-btn text x-small>View All</v-btn>-->
       </v-toolbar>
       <v-list dense width="100%" color="transparent" class="ma-0 pa-0">
         <template v-for="item in results.tracks.items.slice(0, 4)">
@@ -101,7 +88,7 @@
       <v-toolbar dense flat color="transparent">
         <h1 class="text-h6 font-weight-light">Albums</h1>
         <v-spacer></v-spacer>
-        <v-btn text x-small>View All</v-btn>
+<!--        <v-btn text x-small>View All</v-btn>-->
       </v-toolbar>
       <v-list dense width="100%" color="transparent" class="ma-0 pa-0">
         <template v-for="item in results.albums.items.slice(0, 4)">
@@ -126,7 +113,7 @@
       <v-toolbar dense flat color="transparent">
         <h1 class="text-h6 font-weight-light">Artists</h1>
         <v-spacer></v-spacer>
-        <v-btn text x-small>View All</v-btn>
+<!--        <v-btn text x-small>View All</v-btn>-->
       </v-toolbar>
       <v-list dense width="100%" color="transparent" class="ma-0 pa-0">
         <template v-for="item in results.artists.items.slice(0, 4)">
@@ -148,7 +135,7 @@
       <v-toolbar dense flat color="transparent">
         <h1 class="text-h6 font-weight-light">Playlists</h1>
         <v-spacer></v-spacer>
-        <v-btn text x-small>View All</v-btn>
+<!--        <v-btn text x-small>View All</v-btn>-->
       </v-toolbar>
       <v-list dense width="100%" color="transparent" class="ma-0 pa-0">
         <template v-for="item in results.playlists.items.slice(0, 4)">
@@ -214,7 +201,6 @@ export default {
       });
     },
     async search() {
-      console.log("query", this.query);
       if (!this.query || this.query === "") {
         this.results = null;
         this.query = "";

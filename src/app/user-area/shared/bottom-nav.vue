@@ -1,6 +1,6 @@
 <template>
   <v-bottom-navigation
-    class="elevation-0"
+    class="elevation-4"
     :background-color="background"
     grow
     shift
