@@ -5,7 +5,7 @@
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
     </template>
-    <v-sheet elevation="10">
+    <v-sheet elevation="10" color="darker">
       <v-list>
         <v-list-item>
           <v-list-item-avatar size="100" tile>
@@ -40,7 +40,7 @@
               </v-list-item-content>
             </v-list-item>
           </template>
-          <v-sheet elevation="10">
+          <v-sheet elevation="10" color="darker">
             <v-list>
               <v-list-item
                 :key="artist.id"

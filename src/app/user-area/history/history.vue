@@ -28,7 +28,7 @@
                   <v-icon>mdi-dots-vertical</v-icon>
                 </v-btn>
               </template>
-              <v-sheet elevation="10">
+              <v-sheet elevation="10" color="darker">
                 <v-list>
                   <v-list-item :href="`spotify:track:${item.spotifyId}`">
                     <v-list-item-icon>

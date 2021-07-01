@@ -7,9 +7,9 @@
     <v-list color="transparent" class="mt-16 ma-0 pa-0">
       <template v-for="member in members">
         <v-list-item dense :key="member.id">
-<!--          <v-list-item-avatar>-->
-<!--            <span>{{ member.score }}</span>-->
-<!--          </v-list-item-avatar>-->
+          <!--          <v-list-item-avatar>-->
+          <!--            <span>{{ member.score }}</span>-->
+          <!--          </v-list-item-avatar>-->
           <v-list-item-content>
             <v-list-item-title>
               {{ member.username }}

@@ -90,7 +90,12 @@ export default {
     },
     background() {
       return this.partyState
-        ? `background-image: linear-gradient(rgba(0,0,0,0.1) 1%, ${this.partyState.palette ? this.partyState.palette.darkVibrant ?? this.partyState.palette.darkMuted : '000000'}ff 50%, rgba(0,0,0,1) 100%);`
+        ? `background-image: linear-gradient(rgba(0,0,0,0.1) 1%, ${
+            this.partyState.palette
+              ? this.partyState.palette.darkVibrant ??
+                this.partyState.palette.darkMuted
+              : "000000"
+          }ff 50%, rgba(0,0,0,1) 100%);`
         : "";
     },
   },
