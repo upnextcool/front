@@ -30,7 +30,7 @@
             <v-list-item-title>Share party link</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-dialog>
+        <v-dialog max-width="400">
           <template v-slot:activator="{ on, attrs }">
             <v-list-item v-on="on" v-bind="attrs">
               <v-list-item-icon>

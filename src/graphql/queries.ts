@@ -32,6 +32,12 @@ export const SPOTIFY_ARTIST = gql`
   }
 `;
 
+export const SPOTIFY_SONG = gql`
+  query ($songId: String!) {
+    song: spotifySong(songId: $songId)
+  }
+`;
+
 export const PARTY = gql`
   query {
     party {

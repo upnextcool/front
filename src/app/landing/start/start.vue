@@ -34,7 +34,7 @@
             md="8"
             sm="8"
           >
-            <v-icon color="primary" size="120">mdi-music-note-plus</v-icon>
+            <v-icon color="primary" size="80">mdi-music-note-plus</v-icon>
             <h2 class="text-h3 text-uppercase font-weight-thin">upnext</h2>
             <p class="ma-10">
               Let's get the party started! <br /><br />Enter a name for the

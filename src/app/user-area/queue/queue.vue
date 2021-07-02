@@ -38,7 +38,7 @@
 <script>
 import { QUEUE } from "../../../graphql";
 import AppVoteDialog from "./vote-dialog";
-import AppQueueMenu from "./queue-menu";
+import AppQueueMenu from "./menu";
 
 export default {
   components: { AppQueueMenu, AppVoteDialog },

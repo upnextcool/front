@@ -30,10 +30,30 @@
             </v-card>
           </v-responsive>
           <v-card elevation="0" color="transparent" width="80vw">
-            <h1 class="text-h6 mt-2 ellipsis">{{ partyState.name }}</h1>
-            <h1 class="text-body-2 font-weight-light mb-5 ellipsis">
-              {{ partyState.artist }}
-            </h1>
+            <v-sheet
+              color="transparent"
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <v-sheet
+                max-width="calc(80vw - 36px)"
+                style="display: flex; flex-direction: column"
+                color="transparent"
+              >
+                <h1 class="text-h6 mt-2 ellipsis">{{ partyState.name }}</h1>
+                <h1 class="text-body-2 font-weight-light mb-5 ellipsis">
+                  {{ partyState.artist }}
+                </h1>
+              </v-sheet>
+              <v-spacer></v-spacer>
+              <app-home-current-song-menu
+                :song-id="partyState.spotifyId"
+              ></app-home-current-song-menu>
+            </v-sheet>
             <v-progress-linear
               rounded
               color="white"
@@ -64,11 +84,12 @@
 </template>
 
 <script>
-import AppHomeHeader from "./home-header";
+import AppHomeHeader from "./header";
 import { GET_PARTY_STATE } from "../../../graphql";
+import AppHomeCurrentSongMenu from "./current-song-menu";
 
 export default {
-  components: { AppHomeHeader },
+  components: { AppHomeCurrentSongMenu, AppHomeHeader },
   data: () => ({
     partyState: null,
   }),

@@ -37,6 +37,7 @@
               {{ item.name }}
             </v-list-item-title>
             <v-list-item-subtitle>
+              <v-icon x-small>{{ item.explicit ? "mdi-alpha-e-box-outline" : "" }}</v-icon>
               {{ item.artists.map((m) => m.name).join(", ") }}
             </v-list-item-subtitle>
           </v-list-item-content>
@@ -57,10 +58,7 @@
     </v-toolbar>
     <v-list dense width="100%" color="transparent" class="ma-0 pa-0">
       <template v-for="item in album.artists">
-        <v-list-item
-          :to="`/app/view/artist/${item.id}`"
-          :key="item.uri"
-        >
+        <v-list-item :to="`/app/view/artist/${item.id}`" :key="item.uri">
           <v-list-item-content>
             <v-list-item-title>
               {{ item.name }}
@@ -90,9 +88,6 @@ export default {
   watch: {
     id() {
       this.album = null;
-    },
-    album(val) {
-      console.log(val);
     },
   },
   computed: {

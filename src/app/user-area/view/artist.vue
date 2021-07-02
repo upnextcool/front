@@ -64,7 +64,30 @@
       <h1 class="text-h6 font-weight-light">Albums</h1>
     </v-toolbar>
     <v-list dense width="100%" color="transparent" class="ma-0 pa-0">
-      <template v-for="item in artist.albums">
+      <template v-for="item in albums">
+        <v-list-item :to="`/app/view/album/${item.id}`" dense :key="item.uri">
+          <v-list-item-avatar tile>
+            <v-img :src="item.images[0].url"></v-img>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-title>
+              {{ item.name }}
+            </v-list-item-title>
+            <v-list-item-subtitle>
+              {{ item.artists.map((m) => m.name).join(", ") }}
+            </v-list-item-subtitle>
+          </v-list-item-content>
+          <v-list-item-action>
+            <v-icon>mdi-chevron-right</v-icon>
+          </v-list-item-action>
+        </v-list-item>
+      </template>
+    </v-list>
+    <v-toolbar dense flat color="transparent">
+      <h1 class="text-h6 font-weight-light">Singles</h1>
+    </v-toolbar>
+    <v-list dense width="100%" color="transparent" class="ma-0 pa-0">
+      <template v-for="item in singles">
         <v-list-item :to="`/app/view/album/${item.id}`" dense :key="item.uri">
           <v-list-item-avatar tile>
             <v-img :src="item.images[0].url"></v-img>
@@ -102,11 +125,17 @@ export default {
     id() {
       this.artist = null;
     },
-    artist(val) {
-      console.log(val);
+  },
+  computed: {
+    albums() {
+      return this.artist.albums.filter((album) => album.album_type === "album");
+    },
+    singles() {
+      return this.artist.albums.filter(
+        (album) => album.album_type === "single"
+      );
     },
   },
-  computed: {},
   apollo: {
     artist: {
       query: SPOTIFY_ARTIST,

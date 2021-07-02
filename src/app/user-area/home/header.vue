@@ -9,7 +9,7 @@
   </v-app-bar>
 </template>
 <script>
-import AppHomeMenu from "./home-menu";
+import AppHomeMenu from "./menu";
 
 export default {
   name: "app-home-header",
