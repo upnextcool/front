@@ -1,5 +1,6 @@
 <template>
   <v-bottom-navigation
+  v-if="shown"
     class="elevation-4"
     :background-color="background"
     grow
@@ -25,6 +26,9 @@
 export default {
   name: "app-bottom-nav",
   computed: {
+    shown() {
+      return this.$route.path !== '/app/cast';
+    },
     background() {
       return this.$route.path === '/app/home' ? 'transparent' : 'black';
     }

@@ -36,6 +36,10 @@ const routes: Array<RouteConfig> = [
         component: () => import("../app/user-area/home/home.vue"),
       },
       {
+        path: "cast",
+        component: () => import("../app/user-area/cast/cast.vue"),
+      },
+      {
         path: "users",
         component: () => import("../app/user-area/users/users.vue"),
       },
