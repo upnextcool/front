@@ -1519,12 +1519,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fingerprintjs/fingerprintjs@npm:^3.1.3":
-  version: 3.1.3
-  resolution: "@fingerprintjs/fingerprintjs@npm:3.1.3"
+"@fingerprintjs/fingerprintjs@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@fingerprintjs/fingerprintjs@npm:3.3.3"
   dependencies:
     tslib: ^2.0.1
-  checksum: 04faf5237ad85f05614e3e001d77d2eb0928f87f4e4dd964c48dede5e8b667c3a6070e8b9acbe854f442223ba0d3383f6017a7233bc06fd3b6dc96e38cd74b3c
+  checksum: 604a1db51e55fbd6082ec0917efcd594b156324e645c9adde442ac5dfbc352d2907cb4aab2fc62ec4cc5a06665e491c5a92f4ce105d78bd48b48331d0f4576ea
   languageName: node
   linkType: hard
 
@@ -2819,9 +2819,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/test-utils@npm:^1.0.3":
-  version: 1.2.0
-  resolution: "@vue/test-utils@npm:1.2.0"
+"@vue/test-utils@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@vue/test-utils@npm:1.3.0"
   dependencies:
     dom-event-types: ^1.0.0
     lodash: ^4.17.15
@@ -2829,7 +2829,7 @@ __metadata:
   peerDependencies:
     vue: 2.x
     vue-template-compiler: ^2.x
-  checksum: 89d057e2ced843effbb21818c108e29c007236ccb5fac4364f7e49a0ee3978326caada49062ba7760405b1caed1318033849e06f98e387633b32a412aa87cf64
+  checksum: 5f93a1ce3aeb60d93fcf4ea7b28a2d4a327a8309441e87fa1e6c1314106287603d0f2868a084096b7b3db32cc69bba18974f8ba3a19212c7732c05e4da726f61
   languageName: node
   linkType: hard
 
@@ -5345,6 +5345,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"core-js@npm:3.22.4":
+  version: 3.22.4
+  resolution: "core-js@npm:3.22.4"
+  checksum: 1d031597a61d11266343c7f9a788ad620bb8e1a15207c8ff41ee77183789f1d6592d7cbaf4931d74773be08739871c6ae1a59090a7e03f0bc5131d4443cc04d2
+  languageName: node
+  linkType: hard
+
 "core-js@npm:^2.4.0":
   version: 2.6.12
   resolution: "core-js@npm:2.6.12"
@@ -5807,10 +5814,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dayjs@npm:^1.10.5":
-  version: 1.10.5
-  resolution: "dayjs@npm:1.10.5"
-  checksum: a4b6565becdb7607e381666bf1b64a48ade2fcf305c18e4e9c8f9346aa80436a0319a2856f86a6e4b12d6041e3ba3619e9995bde2b44ff9887dcb402e176aba1
+"dayjs@npm:1.11.1":
+  version: 1.11.1
+  resolution: "dayjs@npm:1.11.1"
+  checksum: d5fefd79935f64a3c262e67af7ebeca180bc402b3e99be4e12d20b6d438af3f86d507ba1cbaff95dc0b4e67f1067cea3eaf37b6b74f5494fdd4a6a2909514cd1
   languageName: node
   linkType: hard
 
@@ -7932,7 +7939,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql-tag@npm:^2.12.4, graphql-tag@npm:^2.4.2":
+"graphql-tag@npm:2.12.6":
+  version: 2.12.6
+  resolution: "graphql-tag@npm:2.12.6"
+  dependencies:
+    tslib: ^2.1.0
+  peerDependencies:
+    graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+  checksum: b15162a3d62f17b9b79302445b9ee330e041582f1c7faca74b9dec5daa74272c906ec1c34e1c50592bb6215e5c3eba80a309103f6ba9e4c1cddc350c46f010df
+  languageName: node
+  linkType: hard
+
+"graphql-tag@npm:^2.4.2":
   version: 2.12.4
   resolution: "graphql-tag@npm:2.12.4"
   dependencies:
@@ -8484,6 +8502,13 @@ __metadata:
   version: 5.1.8
   resolution: "ignore@npm:5.1.8"
   checksum: 967abadb61e2cb0e5c5e8c4e1686ab926f91bc1a4680d994b91947d3c65d04c3ae126dcdf67f08e0feeb8ff8407d453e641aeeddcc47a3a3cca359f283cf6121
+  languageName: node
+  linkType: hard
+
+"immutable@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "immutable@npm:4.0.0"
+  checksum: 4b5e9181e4d5fa06728a481835ec09c86367e5d03268666c95b522b7644ab891098022e4479a43c4c81a68f2ed82f10751ce5d33e208d7b873b6e7f9dfaf4d87
   languageName: node
   linkType: hard
 
@@ -10589,10 +10614,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"material-design-icons-iconfont@npm:^6.1.0":
-  version: 6.1.0
-  resolution: "material-design-icons-iconfont@npm:6.1.0"
-  checksum: efb5d80eb461e5ba0589e6bfbd9bdab4c5fc3934029eca1358391c251b93caf850ccb1f2d822b341d0789844c61af6a5189281cd2285fd3dd91849d357d574a3
+"material-design-icons-iconfont@npm:6.7.0":
+  version: 6.7.0
+  resolution: "material-design-icons-iconfont@npm:6.7.0"
+  checksum: 480992de7a187ae437eb990467851b030589f50121089bb57d21491f4f56d9e5bfb971210c4251dedccb018bcfc00d977ee70c3c11f1dec74d3b3661c4833adb
   languageName: node
   linkType: hard
 
@@ -11404,15 +11429,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"null-loader@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "null-loader@npm:3.0.0"
+"null-loader@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "null-loader@npm:4.0.1"
   dependencies:
-    loader-utils: ^1.2.3
-    schema-utils: ^1.0.0
+    loader-utils: ^2.0.0
+    schema-utils: ^3.0.0
   peerDependencies:
-    webpack: ^4.3.0
-  checksum: 27027a3193c1ea1a98fbbada33cba076c8d7bc23815ad6795dac1de1b8faeb02bab325edebc78c05013e0040b27b0e5c0f1fae7752cfe09288eea8ddb0c51152
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: eeb4c4dd2f8f41e46f5665e4500359109e95ec1028a178a60e0161984906572da7dd87644bcc3cb29f0125d77e2b2508fb4f3813cfb1c6604a15865beb4b987b
   languageName: node
   linkType: hard
 
@@ -12613,21 +12638,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier@npm:2.6.2":
+  version: 2.6.2
+  resolution: "prettier@npm:2.6.2"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 48d08dde8e9fb1f5bccdd205baa7f192e9fc8bc98f86e1b97d919de804e28c806b0e6cc685e4a88211aa7987fa9668f30baae19580d87ced3ed0f2ec6572106f
+  languageName: node
+  linkType: hard
+
 "prettier@npm:^1.18.2":
   version: 1.19.1
   resolution: "prettier@npm:1.19.1"
   bin:
     prettier: ./bin-prettier.js
   checksum: bc78219e0f8173a808f4c6c8e0a137dd8ebd4fbe013e63fe1a37a82b48612f17b8ae8e18a992adf802ee2cf7428f14f084e7c2846ca5759cf4013c6e54810e1f
-  languageName: node
-  linkType: hard
-
-"prettier@npm:^2.2.1":
-  version: 2.3.1
-  resolution: "prettier@npm:2.3.1"
-  bin:
-    prettier: bin-prettier.js
-  checksum: 3b37731ff7150feecf19736c77c790e7e276b404ac9af81cbaf87cfecefc48ef9a864f34c2a5caf5955378b8f2525984b8611703a0d9c1f052b4cfa6eb35899f
   languageName: node
   linkType: hard
 
@@ -13608,14 +13633,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:~1.32.0":
-  version: 1.32.13
-  resolution: "sass@npm:1.32.13"
+"sass@npm:1.51.0":
+  version: 1.51.0
+  resolution: "sass@npm:1.51.0"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
+    immutable: ^4.0.0
+    source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 51b798280bd96c8e8d580592bcd40947075e9e55109bbc5e21037427ac2a78e58d3c3cf4b8b33ac9d592758376597d15cd28ddde1cda2885d19791d6321989d4
+  checksum: d674fd87be863961d5e5233a148e381a72b06ca1749ffd95a08be2c3f4aa8fc77e3e21840347a84d7d4542cbf97cd6f9bfae19ecb1f5eefa6c207a3d8f923dbc
   languageName: node
   linkType: hard
 
@@ -14086,6 +14113,13 @@ __metadata:
   version: 2.0.1
   resolution: "source-list-map@npm:2.0.1"
   checksum: 806efc6f75e7cd31e4815e7a3aaf75a45c704871ea4075cb2eb49882c6fca28998f44fc5ac91adb6de03b2882ee6fb02f951fdc85e6a22b338c32bfe19557938
+  languageName: node
+  linkType: hard
+
+"source-map-js@npm:>=0.6.2 <2.0.0":
+  version: 1.0.2
+  resolution: "source-map-js@npm:1.0.2"
+  checksum: c049a7fc4deb9a7e9b481ae3d424cc793cb4845daa690bc5a05d428bf41bf231ced49b4cf0c9e77f9d42fdb3d20d6187619fc586605f5eabe995a316da8d377c
   languageName: node
   linkType: hard
 
@@ -15226,23 +15260,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:~4.1.5":
-  version: 4.1.5
-  resolution: "typescript@npm:4.1.5"
+"typescript@npm:4.6.4":
+  version: 4.6.4
+  resolution: "typescript@npm:4.6.4"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: af660e69aa5184520dfa57362dcf7fd1b26d08b869d76b3bd58dcc04058a757983f470cd61ded824ab01fa08a81d58c7f607d8e360f4e550664b9439d04f8e41
+  checksum: e7bfcc39cd4571a63a54e5ea21f16b8445268b9900bf55aee0e02ad981be576acc140eba24f1af5e3c1457767c96cea6d12861768fb386cf3ffb34013718631a
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@~4.1.5#~builtin<compat/typescript>":
-  version: 4.1.5
-  resolution: "typescript@patch:typescript@npm%3A4.1.5#~builtin<compat/typescript>::version=4.1.5&hash=bda367"
+"typescript@patch:typescript@4.6.4#~builtin<compat/typescript>":
+  version: 4.6.4
+  resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: fde897357ff6bb729323dc6d58753193d0d8e3d90ea66081f9a4eb798e1056a3a47a49c666a7bccdf93e37780ed0913b78de83a766c6da85b73bad3ed34470d0
+  checksum: 1cb434fbc637d347be90e3a0c6cd05e33c38f941713c8786d3031faf1842c2c148ba91d2fac01e7276b0ae3249b8633f1660e32686cc7a8c6a8fd5361dc52c66
   languageName: node
   linkType: hard
 
@@ -15250,7 +15284,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "u@workspace:."
   dependencies:
-    "@fingerprintjs/fingerprintjs": ^3.1.3
+    "@fingerprintjs/fingerprintjs": 3.3.3
     "@types/jest": ^24.0.19
     "@typescript-eslint/eslint-plugin": ^4.18.0
     "@typescript-eslint/parser": ^4.18.0
@@ -15265,36 +15299,36 @@ __metadata:
     "@vue/cli-service": ~4.5.0
     "@vue/eslint-config-prettier": ^6.0.0
     "@vue/eslint-config-typescript": ^7.0.0
-    "@vue/test-utils": ^1.0.3
+    "@vue/test-utils": 1.3.0
     apollo-boost: ^0.4.9
     apollo-link-ws: ^1.0.20
-    core-js: ^3.6.5
-    dayjs: ^1.10.5
+    core-js: 3.22.4
+    dayjs: 1.11.1
     debounce: ^1.2.1
     eslint: ^6.7.2
     eslint-plugin-prettier: ^3.3.1
     eslint-plugin-vue: ^6.2.2
     graphql: ^15.5.0
-    graphql-tag: ^2.12.4
-    material-design-icons-iconfont: ^6.1.0
+    graphql-tag: 2.12.6
+    material-design-icons-iconfont: 6.7.0
     node-gyp: ^9.0.0
     preload-webpack-plugin: ^2.3.0
-    prettier: ^2.2.1
+    prettier: 2.6.2
     register-service-worker: ^1.7.1
-    sass: ~1.32.0
+    sass: 1.51.0
     sass-loader: ^10.0.0
     subscriptions-transport-ws: ^0.9.19
-    typescript: ~4.1.5
+    typescript: 4.6.4
     vue: ^2.6.11
-    vue-apollo: ^3.0.7
+    vue-apollo: 3.1.0
     vue-class-component: ^7.2.3
-    vue-cli-plugin-vuetify: ~2.4.1
+    vue-cli-plugin-vuetify: 2.4.8
     vue-property-decorator: ^9.1.2
-    vue-qrcode-reader: ^3.0.3
+    vue-qrcode-reader: 3.1.0
     vue-router: ^3.2.0
     vue-template-compiler: ^2.6.11
-    vuetify: ^2.4.0
-    vuetify-loader: ^1.7.0
+    vuetify: 2.6.5
+    vuetify-loader: 1.7.3
     vuex: ^3.4.0
   languageName: unknown
   linkType: soft
@@ -15649,16 +15683,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-apollo@npm:^3.0.7":
-  version: 3.0.7
-  resolution: "vue-apollo@npm:3.0.7"
+"vue-apollo@npm:3.1.0":
+  version: 3.1.0
+  resolution: "vue-apollo@npm:3.1.0"
   dependencies:
     chalk: ^2.4.2
     serialize-javascript: ^4.0.0
     throttle-debounce: ^2.1.0
   peerDependencies:
     graphql-tag: ^2
-  checksum: 7040372a26851a8e51b722ef9b54154e59661ad3c19a8b0379e3914a7128f3eec646d63d19da624df600e5448e65fbe433bbe9d2bc6a88cd56ca1b66f8857b37
+  checksum: 6289341d060778faf074aaf8aa96262d6bc1582c53b30d62a60c4c927945a34aef12165c759820af120e6810a30ae569c916703cc81229e1af3fe12ed8a8b07b
   languageName: node
   linkType: hard
 
@@ -15671,11 +15705,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-cli-plugin-vuetify@npm:~2.4.1":
-  version: 2.4.1
-  resolution: "vue-cli-plugin-vuetify@npm:2.4.1"
+"vue-cli-plugin-vuetify@npm:2.4.8":
+  version: 2.4.8
+  resolution: "vue-cli-plugin-vuetify@npm:2.4.8"
   dependencies:
-    null-loader: ^3.0.0
+    null-loader: ^4.0.1
     semver: ^7.1.2
     shelljs: ^0.8.3
   peerDependenciesMeta:
@@ -15683,7 +15717,7 @@ __metadata:
       optional: true
     vuetify-loader:
       optional: true
-  checksum: be4b9309ac7fc68bc680376453d286e7198f477c09238e53e0cec70b6f55aeb61bf64aba58b89d23cf2e03d39310bb2682c503245e828369f4b2705bb55cf296
+  checksum: 50689d04887d41e23a602dcd930a2835537578b89b263a815d0f23761c34e61611d3c54f2e5f32ee425ecff7d422130812ab01cc2f62b8fca63f56c1898b9fa0
   languageName: node
   linkType: hard
 
@@ -15775,16 +15809,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-qrcode-reader@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "vue-qrcode-reader@npm:3.0.3"
+"vue-qrcode-reader@npm:3.1.0":
+  version: 3.1.0
+  resolution: "vue-qrcode-reader@npm:3.1.0"
   dependencies:
     barcode-detector: ^1.0.0
     callforth: ^0.3.1
     core-js: ^3.6.5
     vue: ^2.6.11
     webrtc-adapter: 7.7.0
-  checksum: 4cde1f4b085408b10a7dc5f6d4a389680ef85c2a845352bbc99c62729949cf4fa387b02f0265f6701c3e11ba85c36c523f398190a20bdef0f20e53f0549ff2f9
+  checksum: 7efb577b81d0aa455679d9a1b0c500f1de4d4e2295eb820487b70702a935467c632d3e575581f1b22a658e073e4e9499aa3b7934f9b07e02d13e47f2aea24004
   languageName: node
   linkType: hard
 
@@ -15829,9 +15863,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vuetify-loader@npm:^1.7.0":
-  version: 1.7.2
-  resolution: "vuetify-loader@npm:1.7.2"
+"vuetify-loader@npm:1.7.3":
+  version: 1.7.3
+  resolution: "vuetify-loader@npm:1.7.3"
   dependencies:
     decache: ^4.6.0
     file-loader: ^6.2.0
@@ -15840,16 +15874,16 @@ __metadata:
     vue-template-compiler: ^2.6.10
     vuetify: ^1.3.0 || ^2.0.0
     webpack: ^4.0.0 || ^5.0.0
-  checksum: 990b237d85728cfbd417e3b6f3d47b30271f1d0d817f7dc129098f04db0e707d621b51df6f1c3636219a4f550c3bdc17e9e39e3d1b6354b7401d840439d9a053
+  checksum: 81a31698101ec25e05bf36224af273c315a85787bb4ef41d0fe76f28c4c7d8d409f9ad75535b09b8ccae4cdef4e6fe80b19f148e23f351cd4fc36f9400049421
   languageName: node
   linkType: hard
 
-"vuetify@npm:^2.4.0":
-  version: 2.5.3
-  resolution: "vuetify@npm:2.5.3"
+"vuetify@npm:2.6.5":
+  version: 2.6.5
+  resolution: "vuetify@npm:2.6.5"
   peerDependencies:
     vue: ^2.6.4
-  checksum: 66876faa55a5f51b69ba71a8706bf4d25fcd86cd5c916d2571c036d278afd9448f7469e9997c2d072a6ef81b805c207741db54f9345e8ab0de8d891318e5ada1
+  checksum: 8aa4ffd7e8e7601bd7c4b0a723e1433ef2cf395f85526ab6ae8113e48d82ffdf7af3d48036c18393448d98dae7d35cf4922b99d05f8d158dfd1430ba5a4814ed
   languageName: node
   linkType: hard
 
