@@ -37,7 +37,9 @@
               {{ item.name }}
             </v-list-item-title>
             <v-list-item-subtitle>
-              <v-icon x-small>{{ item.explicit ? "mdi-alpha-e-box-outline" : "" }}</v-icon>
+              <v-icon x-small>{{
+                item.explicit ? "mdi-alpha-e-box-outline" : ""
+              }}</v-icon>
               {{ item.artists.map((m) => m.name).join(", ") }}
             </v-list-item-subtitle>
           </v-list-item-content>

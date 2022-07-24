@@ -57,7 +57,7 @@
       <v-toolbar dense flat color="transparent">
         <h1 class="text-h6 font-weight-light">Songs</h1>
         <v-spacer></v-spacer>
-<!--        <v-btn text x-small>View All</v-btn>-->
+        <!--        <v-btn text x-small>View All</v-btn>-->
       </v-toolbar>
       <v-list dense width="100%" color="transparent" class="ma-0 pa-0">
         <template v-for="item in results.tracks.items.slice(0, 4)">
@@ -88,7 +88,7 @@
       <v-toolbar dense flat color="transparent">
         <h1 class="text-h6 font-weight-light">Albums</h1>
         <v-spacer></v-spacer>
-<!--        <v-btn text x-small>View All</v-btn>-->
+        <!--        <v-btn text x-small>View All</v-btn>-->
       </v-toolbar>
       <v-list dense width="100%" color="transparent" class="ma-0 pa-0">
         <template v-for="item in results.albums.items.slice(0, 4)">
@@ -113,7 +113,7 @@
       <v-toolbar dense flat color="transparent">
         <h1 class="text-h6 font-weight-light">Artists</h1>
         <v-spacer></v-spacer>
-<!--        <v-btn text x-small>View All</v-btn>-->
+        <!--        <v-btn text x-small>View All</v-btn>-->
       </v-toolbar>
       <v-list dense width="100%" color="transparent" class="ma-0 pa-0">
         <template v-for="item in results.artists.items.slice(0, 4)">
@@ -135,7 +135,7 @@
       <v-toolbar dense flat color="transparent">
         <h1 class="text-h6 font-weight-light">Playlists</h1>
         <v-spacer></v-spacer>
-<!--        <v-btn text x-small>View All</v-btn>-->
+        <!--        <v-btn text x-small>View All</v-btn>-->
       </v-toolbar>
       <v-list dense width="100%" color="transparent" class="ma-0 pa-0">
         <template v-for="item in results.playlists.items.slice(0, 4)">
