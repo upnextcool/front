@@ -12991,11 +12991,11 @@ __metadata:
 
 "typescript@patch:typescript@^4.7.4#~builtin<compat/typescript>":
   version: 4.7.4
-  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=bda367"
+  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=a1c5e5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 96d3030cb01143570567cb4f3a616b10df65f658f0e74e853e77a089a6a954e35c800be7db8b9bfe9a1ae05d9c2897e281359f65e4caa1caf266368e1c4febd3
+  checksum: 9096d8f6c16cb80ef3bf96fcbbd055bf1c4a43bd14f3b7be45a9fbe7ada46ec977f604d5feed3263b4f2aa7d4c7477ce5f9cd87de0d6feedec69a983f3a4f93e
   languageName: node
   linkType: hard
 
@@ -13047,7 +13047,7 @@ __metadata:
     vue-qrcode-reader: ^3.1.0
     vue-router: ^4.1.2
     vue-template-compiler: ^2.7.8
-    vuetify: ^2.6.7
+    vuetify: ^2.6.13
     vuetify-loader: ^1.9.1
     vuex: ^4.0.2
   languageName: unknown
@@ -13424,12 +13424,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vuetify@npm:^2.6.7":
-  version: 2.6.7
-  resolution: "vuetify@npm:2.6.7"
+"vuetify@npm:^2.6.13":
+  version: 2.6.13
+  resolution: "vuetify@npm:2.6.13"
   peerDependencies:
     vue: ^2.6.4
-  checksum: 1514c31738dd15970ee7fc9824b2ee6e83da581bd5a99f912561c820ec14f922cc3ca914afa102d4a56bbfc16f78722cfe69d1e5c3ab75f46a32bb3b6623745a
+  checksum: c2b5ac22a760f68d7e7503c9c900a87a9180a171a45700466b0a9d8b3fb99d5250668f38d6d50c16adfa71bce2afcad8c1e03398b5d0ad25bc318f32dae2f974
   languageName: node
   linkType: hard
 
